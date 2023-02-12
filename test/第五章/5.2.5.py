@@ -1,5 +1,9 @@
 #coding=utf-8
-#�򿪰ٶ���ҳ
-driver.get('https://www.baidu.com') 
-#������
-driver.find_element_by_partial_link_text('��').click()
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+#加载chrome webdriver驱动
+driver = webdriver.Chrome()
+#打开百度首页
+driver.get('https://www.baidu.com')
+#在百度首页点击 新闻 超链接"
+driver.find_element(By.PARTIAL_LINK_TEXT, '新').click()

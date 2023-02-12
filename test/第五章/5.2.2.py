@@ -6,6 +6,6 @@ driver = webdriver.Chrome()
 #打开百度首页
 driver.get('https://www.baidu.com')
 #在搜索输入框中输入文本
-driver.find_element(By.ID, 'kw').send_keys('python')
+driver.find_element(By.NAME, 'wd').send_keys('python')
 
 

@@ -1,5 +1,11 @@
 #coding=utf-8
-#´ò¿ª°Ù¶ÈÊ×Ò³
-driver.get('https://www.baidu.com') 
-#ÔÚ°Ù¶ÈÊ×Ò³µã»÷ ĞÂÎÅ ³¬Á´½Ó"
-driver.find_element_by_link_text('ĞÂÎÅ').click() 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+#åŠ è½½chrome webdriveré©±åŠ¨
+driver = webdriver.Chrome()
+#æ‰“å¼€ç™¾åº¦é¦–é¡µ
+driver.get('https://www.baidu.com')
+#åœ¨ç™¾åº¦é¦–é¡µç‚¹å‡» æ–°é—» è¶…é“¾æ¥"
+driver.find_element(By.LINK_TEXT, 'æ–°é—»').click()
+
+

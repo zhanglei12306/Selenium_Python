@@ -1,8 +1,10 @@
 #coding=utf-8
 from selenium import webdriver
-#¼ÓÔØchrome webdriverÇı¶¯
+from selenium.webdriver.common.by import By
+#åŠ è½½chrome webdriveré©±åŠ¨
 driver = webdriver.Chrome()
-#´ò¿ª°Ù¶ÈÊ×Ò³
-driver.get('https://www.baidu.com') 
-#ÔÚËÑË÷ÊäÈë¿òÖĞÊäÈë×Ö·û
-driver.find_element_by_class_name('s_ipt').send_keys('python') 
+#æ‰“å¼€ç™¾åº¦é¦–é¡µ
+driver.get('https://www.baidu.com')
+#åœ¨æœç´¢è¾“å…¥æ¡†ä¸­è¾“å…¥å­—ç¬¦
+driver.find_element(By.CLASS_NAME, 's_ipt').send_keys('python')
+
