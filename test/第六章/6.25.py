@@ -6,13 +6,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://www.baidu.com")
-bg_config = driver.find_element_by_link_text("ÉèÖÃ")
+bg_config = driver.find_element_by_link_text("è®¾ç½®")
 ActionChains(driver).move_to_element(bg_config).perform()
-#Êó±êĞüÍ£Ê±£¬¶¨Î»ÔªËØ£¬³¬Á´½Ó"ËÑË÷ÉèÖÃ"£»È»ºóÊµÏÖµ¥»÷²Ù×÷¡£
-driver.find_element_by_link_text("ËÑË÷ÉèÖÃ").click()
+#é¼ æ ‡æ‚¬åœæ—¶ï¼Œå®šä½å…ƒç´ ï¼Œè¶…é“¾æ¥"æœç´¢è®¾ç½®"ï¼›ç„¶åå®ç°å•å‡»æ“ä½œã€‚
+driver.find_element_by_link_text("æœç´¢è®¾ç½®").click()
 time.sleep(3)
 se = driver.find_element_by_id("nr")
-Select(se).select_by_visible_text("Ã¿Ò³ÏÔÊ¾20Ìõ")
+Select(se).select_by_visible_text("æ¯é¡µæ˜¾ç¤º20æ¡")
 ops = Select(se).options
 for i in ops:
     print(i.text)
