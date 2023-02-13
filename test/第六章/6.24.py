@@ -6,13 +6,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://www.baidu.com")
-bg_config = driver.find_element_by_link_text("ÉèÖÃ")
+bg_config = driver.find_element_by_link_text("è®¾ç½®")
 ActionChains(driver).move_to_element(bg_config).perform()
-#Êó±êĞüÍ£Ê±£¬¶¨Î»ÔªËØ£¬³¬Á´½Ó"ËÑË÷ÉèÖÃ"£»È»ºóÊµÏÖµ¥»÷²Ù×÷¡£
-driver.find_element_by_link_text("ËÑË÷ÉèÖÃ").click()
-#²»Í¬Ò³ÃæÌø×ªĞèÒªÊ±¼ä£¬ÉèÖÃµÈ´ıÊ±¼ä
+#é¼ æ ‡æ‚¬åœæ—¶ï¼Œå®šä½å…ƒç´ ï¼Œè¶…é“¾æ¥"æœç´¢è®¾ç½®"ï¼›ç„¶åå®ç°å•å‡»æ“ä½œã€‚
+driver.find_element_by_link_text("æœç´¢è®¾ç½®").click()
+#ä¸åŒé¡µé¢è·³è½¬éœ€è¦æ—¶é—´ï¼Œè®¾ç½®ç­‰å¾…æ—¶é—´
 time.sleep(3)
 se = driver.find_element_by_id("nr")
-#µÚ2ÏîtextÎª¡°Ã¿Ò³ÏÔÊ¾20Ìõ¡±
-Select(se).select_by_visible_text("Ã¿Ò³ÏÔÊ¾20Ìõ")
+#ç¬¬2é¡¹textä¸ºâ€œæ¯é¡µæ˜¾ç¤º20æ¡â€
+Select(se).select_by_visible_text("æ¯é¡µæ˜¾ç¤º20æ¡")
 driver.quit()
