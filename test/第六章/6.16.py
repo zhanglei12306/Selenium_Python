@@ -2,5 +2,5 @@
 from selenium import webdriver
 driver = webdriver.Chrome()
 driver.get('https://www.baidu.com/')
-#¿ØÖÆÌ¨´òÓ¡tile¡°°Ù¶ÈÒ»ÏÂ£¬Äã¾ÍÖªµÀ¡±
+#æ§åˆ¶å°æ‰“å°tileâ€œç™¾åº¦ä¸€ä¸‹ï¼Œä½ å°±çŸ¥é“â€
 print(driver.title)
