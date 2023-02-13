@@ -2,5 +2,5 @@
 from selenium import webdriver
 driver = webdriver.Chrome()
 driver.get('https://www.baidu.com/')
-#刷新当前页面
+#鍒锋柊褰撳墠椤甸潰
 driver.refresh()
