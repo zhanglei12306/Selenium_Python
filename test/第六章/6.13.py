@@ -1,6 +1,6 @@
 #coding=utf-8
 from selenium import webdriver  
 driver = webdriver.Chrome()
-driver.get('https://www.baidu.com') #´ò¿ª°Ù¶ÈÖ÷Ò³Ãæ
-#Ö´ĞĞºó£¬¿ØÖÆÌ¨´òÓ¡¡°°Ù¶ÈÒ»ÏÂ¡±
+driver.get('https://www.baidu.com') #æ‰“å¼€ç™¾åº¦ä¸»é¡µé¢
+#æ‰§è¡Œåï¼Œæ§åˆ¶å°æ‰“å°â€œç™¾åº¦ä¸€ä¸‹â€
 print(driver.find_element_by_id('su').get_attribute('value'))
