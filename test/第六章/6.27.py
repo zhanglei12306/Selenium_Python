@@ -2,17 +2,18 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
-#µ¼ÈëActionChainsÀà
+#å¯¼å…¥ActionChainsç±»
 from selenium.webdriver.common.action_chains import ActionChains
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://www.baidu.com")
-bg_config = driver.find_element_by_link_text("ÉèÖÃ")
+bg_config = driver.find_element_by_link_text("è®¾ç½®")
 ActionChains(driver).move_to_element(bg_config).perform()
-driver.find_element_by_link_text("ËÑË÷ÉèÖÃ").click()
+driver.find_element_by_link_text("æœç´¢è®¾ç½®").click()
 time.sleep(3)
 se = driver.find_element_by_id("nr")
-Select(se).select_by_visible_text("Ã¿Ò³ÏÔÊ¾20Ìõ")
+Select(se).select_by_visible_text("æ¯é¡µæ˜¾ç¤º20æ¡")
+
 ops = Select(se).first_selected_option
 print(ops.text)
 driver.quit()
