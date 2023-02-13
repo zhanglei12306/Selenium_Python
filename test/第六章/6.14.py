@@ -1,5 +1,5 @@
 #coding=utf-8
 from selenium import webdriver
 driver = webdriver.Chrome()
-#浏览器窗口最大化
+#娴忚鍣ㄧ獥鍙ｆ渶澶у寲
 driver.maximize_window()
