@@ -1,13 +1,13 @@
 #coding=utf-8
 from selenium import webdriver
-#µ¼ÈëActionChainsÀà
+#å¯¼å…¥ActionChainsç±»
 from selenium.webdriver.common.action_chains import ActionChains
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://www.baidu.com")
-bg_config = driver.find_element_by_link_text("ÉèÖÃ")
-#ÕâÀïÊ¹ÓÃ·½·¨move_to_elementÄ£Äâ½«Êó±êĞüÍ£ÔÚ³¬Á´½Ó"ÉèÖÃ"
+bg_config = driver.find_element_by_link_text("è®¾ç½®")
+#è¿™é‡Œä½¿ç”¨æ–¹æ³•move_to_elementæ¨¡æ‹Ÿå°†é¼ æ ‡æ‚¬åœåœ¨è¶…é“¾æ¥"è®¾ç½®"
 ActionChains(driver).move_to_element(bg_config).perform()
-#Êó±êĞüÍ£Ê±£¬¶¨Î»ÔªËØ£¬³¬Á´½Ó"ËÑË÷ÉèÖÃ"£»È»ºóÊµÏÖµ¥»÷²Ù×÷¡£
-driver.find_element_by_link_text("ËÑË÷ÉèÖÃ").click()
+#é¼ æ ‡æ‚¬åœæ—¶ï¼Œå®šä½å…ƒç´ ï¼Œè¶…é“¾æ¥"æœç´¢è®¾ç½®"ï¼›ç„¶åå®ç°å•å‡»æ“ä½œã€‚
+driver.find_element_by_link_text("æœç´¢è®¾ç½®").click()
 driver.quit()
