@@ -1,17 +1,16 @@
-#coding=utf-8
-from selenium import webdriver  # import 'webdriver' Ä£¿é
+from selenium import webdriver  # import 'webdriver' æ¨¡å—
 import time
-#¼ÓÔØchrome webdriverÇı¶¯
+#åŠ è½½chrome webdriveré©±åŠ¨
 driver = webdriver.Chrome()
 driver.implicitly_wait(5)
 driver.maximize_window()
-#´ò¿ª°Ù¶ÈÖ÷Ò³Ãæ
-driver.get('https://www.cnblogs.com') 
+#æ‰“å¼€ç™¾åº¦ä¸»é¡µé¢
+driver.get('https://www.cnblogs.com')
 print("before login:")
-#´òÓ¡È«²¿cookie
+#æ‰“å°å…¨éƒ¨cookie
 for cookie_detail in driver.get_cookies():
     print(cookie_detail)
-#µÈ´ı30Ãë£¬·½±ãÊÖ¶¯¸ÉÔ¤ÊäÈëÕËºÅ¡¢ÃÜÂë
+#ç­‰å¾…30ç§’ï¼Œæ–¹ä¾¿æ‰‹åŠ¨å¹²é¢„è¾“å…¥è´¦å·ã€å¯†ç 
 time.sleep(30) 
 print("after login:")
 for cookie_detail in driver.get_cookies():
