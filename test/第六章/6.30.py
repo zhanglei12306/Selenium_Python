@@ -6,4 +6,4 @@ driver.get('https://www.baidu.com')
 driver.maximize_window()
 element = driver.find_element_by_link_text(u"新闻")
 #双击“新闻”
-ActionChains(driver).double_click(element).perform()
+ActionChains(driver).context_click(element).perform()
