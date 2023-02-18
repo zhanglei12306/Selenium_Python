@@ -1,16 +1,15 @@
-#coding=utf-8
-from urllib import request
 import http.cookiejar
 import urllib3
 import ssl
+
 ssl._create_default_https_context = ssl._create_unverified_context
-#Ïû³ıSSL¾¯¸æµÄĞÅÏ¢
+# æ¶ˆé™¤SSLè­¦å‘Šçš„ä¿¡æ¯
 urllib6.disable_warnings()
-#´´½¨CookieJar¶ÔÏó
+# åˆ›å»ºCookieJarå¯¹è±¡
 cookie = http.cookiejar.CookieJar()
 opener = request.build_opener(request.HTTPCookieProcessor(cookie))
-#ÔÚ´ò¿ªURLµÄ¹ı³ÌÖĞ£¬»á½«cookieµÄĞÅÏ¢´æ·ÅÖÁcookie¶ÔÏóÖĞ¡£
+# åœ¨æ‰“å¼€URLçš„è¿‡ç¨‹ä¸­ï¼Œä¼šå°†cookieçš„ä¿¡æ¯å­˜æ”¾è‡³cookieå¯¹è±¡ä¸­ã€‚
 req = opener.open('http://sogou.com')
-#±éÀúcookie¶ÔÏó
+# éå†cookieå¯¹è±¡
 for i in cookie:
-    print(i.name + ":"+ i.value)
+    print(i.name + ":" + i.value)
