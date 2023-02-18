@@ -5,7 +5,8 @@ driver.maximize_window()
 driver.get("https://www.baidu.com")
 jq = "$('#kw').val('selenium')"
 driver.execute_script(jq)
-#以下代码实现单击"百度以下"按钮
+#浠ヤ笅浠ｇ爜瀹炵幇鍗曞嚮"鐧惧害浠ヤ笅"鎸夐挳
 jq = "$('#su').click()"
 driver.execute_script(jq)
 driver.quit()
+
