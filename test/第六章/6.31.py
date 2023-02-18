@@ -1,9 +1,9 @@
 #coding=utf-8
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver import ActionChains
 driver = webdriver.Chrome()
 driver.get('https://www.baidu.com')
-driver.implicitly_wait(10)
 driver.maximize_window()
-driver.find_element_by_id("kw").send_keys("SeleniumTest")
-driver.find_element_by_id("kw").send_keys(Keys.BACK_SPACE)
+element = driver.find_element_by_link_text(u"新闻")
+#双击“新闻”
+ActionChains(driver).double_click(element).perform()
