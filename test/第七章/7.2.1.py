@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 driver = webdriver.Chrome()
 driver.get("https://user.qunar.com/passport/login.jsp?")
