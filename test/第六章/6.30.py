@@ -4,6 +4,6 @@ from selenium.webdriver import ActionChains
 driver = webdriver.Chrome()
 driver.get('https://www.baidu.com')
 driver.maximize_window()
-element = driver.find_element_by_link_text(u"ĞÂÎÅ")
-#Ë«»÷¡°ĞÂÎÅ¡±
-ActionChains(driver).double_click(element).perform()»÷²Ù×÷
+element = driver.find_element_by_link_text(u"æ–°é—»")
+#åŒå‡»â€œæ–°é—»â€
+ActionChains(driver).double_click(element).perform()
